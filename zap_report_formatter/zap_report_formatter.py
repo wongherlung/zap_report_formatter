@@ -70,7 +70,7 @@ def write_to_file(xml, filename):
     f = BytesIO()
     et = ET.ElementTree(xml)
     et.write(f, encoding='utf-8', xml_declaration=True)
-    outfile = open(filename, 'w')
+    outfile = open(filename, 'wb')
     outfile.write(f.getvalue())
     outfile.close
 
